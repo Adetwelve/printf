@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
+ *print_string - function to print string
  *
- *
+ * Return: always 0.
  */
 int print_string(char *string)
 {
