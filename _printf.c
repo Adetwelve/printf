@@ -1,12 +1,12 @@
-#include <stdarg.h>
 #include "main.h"
-#include <stdio.h>
 
-/*
- *
- *
+/**
+ *_printf - print argument .
+ *format: argument 
+ *data: list
+ *Return: always 0
  */
-int prin(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	int count, i;
 	va_list data;
