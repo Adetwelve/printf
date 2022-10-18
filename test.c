@@ -10,7 +10,7 @@ int main(void)
 {
 	int n;
 
-	n = prin("hello %s %c %%", "adeniyi", 'A');
+	n =_printf("hello %s %c %%", "adeniyi", 'A');
 
 	n = printf("\nn = %d\n", n);
 
