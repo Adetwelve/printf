@@ -2,7 +2,7 @@
 
 /**
  *_printf - print argument .
- *format: argument 
+ *@format: list of argument type passed to the function
  *data: list
  *Return: always 0
  */
@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	for (i = 0; format[i] != '\0'; )
 	{
 		if (format[i] != '%')
-		{		
+		{
 			count += _putchar(format[i]);
 			i++;
 		}
@@ -23,19 +23,19 @@ int _printf(const char *format, ...)
 		{
 		switch (format[i + 1])
 		{
-			case 'c' :
+			case 'c':
 				/* print the character from the va_arguments */
 				count += _putchar(va_arg(data, int));
 				break;
-			case 's' :
+			case 's':
 				/* print string from va_arguments */
 				count += print_string(va_arg(data, char *));
 				break;
-			case '%' :
+			case '%':
 				/* print % from  va_argument */
 				count += _putchar('%');
 				break;
-			defult:
+defult:
 				break;
 		}
 
@@ -43,6 +43,6 @@ int _printf(const char *format, ...)
 		}
 	}
 
-	return (count);	
+	return (count);
 
 }
